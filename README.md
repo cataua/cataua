@@ -5,9 +5,9 @@
 
 ### Hi, there!
 
-I'm currently working as a Fullstack Developer, with the main technologies: Javascript, NodeJS, VueJS, ReactJS, PHP, Laravel, AEM, Java, Python and Wordpress. At the moment I'm working at Compasso UOL as a AEM/VueJS Frontend Developer.
+I'm currently working as an AEM Frontend Engineer at Compass UOL, where I develop custom components in VueJS/AEM and refine new feature requirements. I work with these technologies: Javascript (NodeJS, VueJS, ReactJS), PHP (Wordpress, Laravel), AEM, Java, Python.
 
-- 🌱 I’m currently learning Pyhton, Java, Project Managment, Design Thinking and UX/UI Design
+- 🌱 I’m currently looking to improve my knowledge in Pyhton, C/C++, Java, Project management, Agile Development, and IoT (Arduino/Raspberry Pi)
 
 ![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=cataua&count_private=true&theme=tokyonight&showicons=true)
 ![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cataua&langs_count=5&theme=tokyonight)
