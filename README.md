@@ -3,6 +3,10 @@
 [![Linkedin: rogeriocaetano](https://img.shields.io/badge/-rogeriocaetano-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rogeriocaetano/)](https://www.linkedin.com/in/rogeriocaetano/)
 [![GitHub Rogério Caetano](https://img.shields.io/github/followers/cataua?label=follow&style=social)](https://github.com/cataua)
 
+### Hi, there!
+
+I'm currently working as an AEM Frontend Engineer at Compass UOL, where I develop custom components in VueJS/AEM and refine new feature requirements. I work with these technologies: Javascript (NodeJS, VueJS, ReactJS), PHP (Wordpress, Laravel), AEM, Java, Python. And I am a retro computer passionate, nowadays my focus are in MSX and Zx Spectrum platforms.
+
 ![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white)![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![react](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)![vuejs](https://img.shields.io/badge/vuejs-000000?style=for-the-badge&logo=vuejs&logoColor=white)![ts](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)
@@ -17,12 +21,4 @@
 
 ![c](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white)![c++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c++&logoColor=white)![iot](https://img.shields.io/badge/iot-000000?style=for-the-badge&logo=iot&logoColor=white)
 
-### Hi, there!
-
-I'm currently working as an AEM Frontend Engineer at Compass UOL, where I develop custom components in VueJS/AEM and refine new feature requirements. I work with these technologies: Javascript (NodeJS, VueJS, ReactJS), PHP (Wordpress, Laravel), AEM, Java, Python.
-
-- 🌱 I’m currently looking to improve my knowledge in Pyhton, C/C++, Java, Project management, Agile Development, and IoT (Arduino/Raspberry Pi)
-
-![My GitHub Stats](https://github-readme-stats.vercel.app/api/?username=cataua&count_private=true&theme=tokyonight&showicons=true)
-![My GitHub Language Stats](https://github-readme-stats.vercel.app/api/top-langs/?username=cataua&langs_count=5&theme=tokyonight)
 
