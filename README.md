@@ -1,11 +1,83 @@
-## Rogério Caetano
+<style>
+    .box-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .box-header-description {
+        display: block;
+    }
+    .profile-pic {
+        display: block;
+        width: 124px;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        padding: 0;
+        margin-right: 16px;
+    }
+    .profile-pic > img {
+        display: block;
+        min-width: 100%;
+        min-height: 100%;
+    }
+    .stacks {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 8px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #000;
+        flex-wrap: wrap;
+        margin: 8px auto;
+    }
+    .stacks > span {
+    }
+    .stacks > span:not(:last-child)::after {
+        content: " | ";
+        padding: 0;
+        height: 100%;
+    }
+</style>
+<div class="box-header">
+<span class="profile-pic">
+<img src="https://avatars.githubusercontent.com/u/1001818?v=4" alt="Rogério Caetano" />
+</span>
+<span class="box-header-description">
+<h2>&#128187; Rogério Caetano</h2>
+<h3>Software Engineer/Software Architect</h3>
+</span>
+</div>
 
-[![Linkedin: rogeriocaetano](https://img.shields.io/badge/-rogeriocaetano-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/rogeriocaetano/)](https://www.linkedin.com/in/rogeriocaetano/)
+<span style="display: inline-flex;align-items: center; justify-items: flex-start; gap: 4px; padding: 0 8px 0 0">[![Linkedin Rogerio Caetano](./assets/img/LinkedIn_icon.svg)](https://www.linkedin.com/in/rogeriocaetano/)
+<span style="font-size: 1rem;font-weight:800;line-height: 1.2rem;">/in/rogeriocaetano</span></span>
 [![GitHub Rogério Caetano](https://img.shields.io/github/followers/cataua?label=follow&style=social)](https://github.com/cataua)
+<span class="stacks">
+<span>Adobe Experience Manager (AEM)</span>
+<span>PHP</span>
+<span>Javascript</span>
+<span>ReactJS</span>
+<span>NodeJS</span>
+<span>VueJS</span>
+<span>Typescript</span>
+<span>HTML</span>
+<span>CSS/Sass</span>
+<span>C/C++</span>
+<span>Python</span>
+<span>AWS</span>
+<span>GCP</span>
+<span>MySQL</span>
+<span>PostgreSql</span>
+<span>IOT</span>
+</span>
 
-### Hi, there!
+🤗 Hi, there!
+-----
 
-I'm currently working as an AEM Frontend Engineer at Compass UOL, where I develop custom components in VueJS/AEM and refine new feature requirements. I work with these technologies: Javascript (NodeJS, VueJS, ReactJS), PHP (Wordpress, Laravel), AEM, Java, Python. And I am a retro computer passionate, nowadays my focus are in MSX and Zx Spectrum platforms.
+
+I'm glad to see you here in my space of study and experimentation. 
 
 ![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white)![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
