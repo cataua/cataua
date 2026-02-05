@@ -2,54 +2,53 @@
 ### Software Engineer/Software Architect
 
 
-<a href="README-pt.md">Versão em Português</a>
+<a href="README.md">English version</a>
 
 ![Rogério Caetano - Software Engineer](./assets/img/heeader.min.svg)
 
-Hi, I'm Rogério Caetano!🤗
------
-### 🎨 Graphic Design Specialist | 💻 Software Engineering | 👾 Retrocomputing & IoT
+# Olá, eu sou o Rogério Caetano! 👋
 
-I am a professional with over **20 years of experience in the visual arts**, now merging my solid background in Design and Communication with software and hardware development. With a postgraduate degree in Graphic Design from Estácio de Sá, my career has been defined by solving complex problems through creativity—a skill I now apply to embedded systems and software engineering.
+### 🎨 Especialista em Design Gráfico | 💻 Desenvolvedor de sistemas | 👾 Retrocomputação & IoT
 
----
-
-## 🚀 Background & Expertise
-
-- **Design & Illustration:** With extensive experience in major media outlets and editorial projects, I’ve developed a systemic product vision that I bring to my coding. I believe software, like design, must be functional, efficient, and well-structured.
-- **Professional Maturity:** Two decades of professional practice have provided me with the discipline and critical thinking required to master complex technologies in a self-taught and structured manner.
-- **Hardware & Low-Level:** I am passionate about the "soul" of computing. I dedicate my time to studying **Z80 Assembly**, **C/C++**, and 8-bit architectures (MSX/ZX Spectrum), alongside hands-on projects with **ESP32** and **Arduino**.
+Sou um profissional com mais de **20 anos de trajetória no universo visual**, agora unindo minha sólida experiência em Design e Comunicação com o desenvolvimento de software e hardware. Sou pós-graduado em Design Gráfico pela Estácio de Sá (Juiz de Fora) e minha carreira é marcada pela resolução de problemas complexos através da criatividade — habilidade que hoje direciono para sistemas embarcados e engenharia de software.
 
 ---
 
-## 🛠️ Tech Stack & Tools
+## 🚀 Trajetória & Background
 
-| Category | Technologies |
+- **Design & Ilustração:** Com vasta experiência em grandes veículos e projetos editoriais, desenvolvi uma visão sistêmica de produto que aplico no código. Entendo que o software, assim como o design, deve ser funcional, eficiente e bem estruturado.
+- **Experiência Consolidada:** Duas décadas de atuação profissional me deram a disciplina e o olhar crítico necessários para migrar para tecnologias complexas de forma estruturada e autodidata.
+- **Hardware & Low-Level:** Sou apaixonado pela "alma" da computação. Dedico meu tempo ao estudo de **Assembly Z80**, **C/C++** e arquiteturas de 8 bits (MSX/ZX Spectrum), além de projetos práticos com **ESP32** e **Arduino**.
+
+---
+
+## 🛠️ Stack Técnica & Ferramentas
+
+| Categoria | Tecnologias |
 | :--- | :--- |
-| **Languages** | PHP, Javascript, C/C++, Python, Z80 Assembly, COBOL |
+| **Linguagens** | PHP, Javascript, C/C++, Python, Z80 Assembly, COBOL |
 | **Frameworks/Web** | Symfony (PHP), Laravel (PHP), Sass (CSS), ReactJS, NodeJS, HTML/CSS |
 | **Hardware/IoT** | Arduino, NodeMCU, ESP32, Raspberry Pi |
-| **Design** | Adobe Creative Suite, Illustration, Art Direction |
-| **Environment** | WSL (Linux), Linux, Docker, VS Code |
+| **Design** | Adobe Creative Suite, Ilustração, Direção de Arte |
+| **Ambiente** | WSL (Linux), Linux, Docker, VS Code |
 
 ---
 
-## 📚 Personal Interests
+## 📚 Interesses Pessoais
 
-- 🕹️ **Retrocomputing:** 8-bit systems preservation and programming.
-- 🎨 **Visual Arts:** Continuous practice in watercolor, gouache, and acrylics.
-- 🔌 **Electronics:** Prototyping and circuit building.
-- 🎥 **Culture:** Classical literature, cinema, and music (bass guitar).
+- 🕹️ **Retrocomputaria:** Preservação e programação para sistemas de 8 bits.
+- 🎨 **Artes Visuais:** Prática contínua de aquarela, guache e pintura acrílica.
+- 🔌 **Eletrônica:** Prototipagem e montagem de circuitos.
+- 🎥 **Cultura:** Literatura clássica, cinema e música (baixo).
 
 ---
 
-## 📫 Get in Touch
+## 📫 Vamos conectar?
 
-Whether it's to discuss the future of IoT or to talk about the golden age of 8-bit microcomputers, feel free to reach out!
+Seja para discutir o futuro do IoT ou para falar sobre a era de ouro dos microcomputadores de 8 bits, sinta-se à vontade para entrar em contato!
 
 [LinkedIn](https://www.linkedin.com/in/rogeriocaetano/) | [E-mail](mailto:rogerio+github@caetanorama.ppg.br)
-
----
+</div>
 
 ![html5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white)![css3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white)![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=Sass&logoColor=white)![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)![react](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)![vuejs](https://img.shields.io/badge/vuejs-000000?style=for-the-badge&logo=vuejs&logoColor=white)![ts](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white)![php](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=PHP&logoColor=white)![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)![mysql](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)![aws](https://img.shields.io/badge/Amazon%20Web%20Services-232F3E?style=for-the-badge&logo=amazon-web-services&logoColor=white)![google cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
