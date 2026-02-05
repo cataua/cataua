@@ -1,0 +1,26 @@
+<svg width="800" height="200" viewBox="0 0 800 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="200" rx="10" fill="#1A1A1A"/>
+  <path d="M0 40H800M0 80H800M0 120H800M0 160H800M40 0V200M80 0V200M120 0V200M160 0V200M200 0V200M240 0V200M280 0V200M320 0V200M360 0V200M400 0V200M440 0V200M480 0V200M520 0V200M560 0V200M600 0V200M640 0V200M680 0V200M720 0V200M760 0V200" stroke="#2D2D2D" stroke-width="1"/>
+  
+  <path d="M50 100H150M150 100V150M150 100L180 70" stroke="#4CAF50" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="50" cy="100" r="4" fill="#4CAF50"/>
+  <circle cx="180" cy="70" r="4" fill="#4CAF50"/>
+  
+  <rect x="230" y="45" width="340" height="110" rx="4" fill="#333333" stroke="#FFD700" stroke-width="2"/>
+  <rect x="240" y="35" width="10" height="10" fill="#555555"/>
+  <rect x="260" y="35" width="10" height="10" fill="#555555"/>
+  <rect x="280" y="35" width="10" height="10" fill="#555555"/>
+  <rect x="300" y="35" width="10" height="10" fill="#555555"/>
+  <rect x="530" y="35" width="10" height="10" fill="#555555"/>
+  
+  <text x="260" y="85" font-family="monospace" font-size="28" font-weight="bold" fill="#FFD700">ROGÉRIO CAETANO</text>
+  <text x="260" y="115" font-family="monospace" font-size="14" fill="#FFFFFF">DESIGNER + SOFTWARE ENGINEER</text>
+  <text x="260" y="135" font-family="monospace" font-size="12" fill="#AAAAAA">8-BIT ENTHUSIAST | IoT | C++ | PHP</text>
+  
+  <rect x="620" y="70" width="120" height="30" rx="15" fill="#4CAF50" fill-opacity="0.2" stroke="#4CAF50"/>
+  <text x="640" y="90" font-family="monospace" font-size="12" fill="#4CAF50" font-weight="bold">ONLINE_MODE</text>
+  
+  <rect x="525" y="123" width="8" height="15" fill="#FFD700">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
+  </rect>
+</svg>
