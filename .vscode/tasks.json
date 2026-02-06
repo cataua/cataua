@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Jekyll Serve",
+			"type": "shell",
+			"command": "cd ${workspaceFolder}\\docs; jekyll serve",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
