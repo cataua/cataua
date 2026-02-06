@@ -2,11 +2,11 @@
 title: Rogério Caetano
 description: Software Engineer/Software Architect - Design | Software Engineering | IoT | Retrocomputing
 author: Rogério Caetano
-url: https://cataua.github.io
+url: https://rogerio.caetano.jdf.br
 repository: cataua/cataua.github.io
 
 # Theme
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 
 # Plugins
 plugins:
