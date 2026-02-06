@@ -10,9 +10,9 @@ function translate(button) {
     languages.forEach(function(language) {
         const elements = document.querySelectorAll(`#${language}`);
         elements.forEach(function(element) {
-            element.classList.remove('hiden');
+            element.classList.remove('hide');
             if (language !== lang) {
-                element.classList.add('hiden');
+                element.classList.add('hide');
             }
         });
     });
