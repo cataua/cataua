@@ -15,7 +15,8 @@ function translate(button) {
         const elements = document.querySelectorAll(`#${language}`);
         elements.forEach(function(element) {
             element.classList.remove('hide');
-            if (language !== lang) {
+            const id = element.getAttribute('id');
+            if (language !== id) {
                 element.classList.add('hide');
             }
         });
