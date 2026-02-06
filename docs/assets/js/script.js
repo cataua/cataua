@@ -6,7 +6,7 @@
 })();
 function translate(button) {
     const languages = [ 'en', 'pt'];
-    const lang = button.target.getAttribute('data-lang');
+    const lang = button.target.getAttribute('data-language');
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(function(btn) {
         btn.classList.toggle('hide');
@@ -14,10 +14,11 @@ function translate(button) {
     languages.forEach(function(language) {
         const elements = document.querySelectorAll(`#${language}`);
         elements.forEach(function(element) {
-            element.classList.remove('hide');
             const id = element.getAttribute('id');
             if (language !== id) {
                 element.classList.add('hide');
+            } else {
+                element.classList.remove('hide');
             }
         });
     });
