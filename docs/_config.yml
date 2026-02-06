@@ -1,0 +1,29 @@
+# Jekyll Configuration for GitHub Pages
+title: Rogério Caetano
+description: Software Engineer/Software Architect - Design | Software Engineering | IoT | Retrocomputing
+author: Rogério Caetano
+url: https://cataua.github.io
+repository: cataua/cataua.github.io
+
+# Theme
+theme: jekyll-theme-cayman
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+# Collections
+collections_dir: .
+
+# Exclude these files from the build
+exclude:
+  - README.md
+  - README-pt.md
+  - CNAME
