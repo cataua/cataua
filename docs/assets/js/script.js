@@ -7,6 +7,10 @@
 function translate(button) {
     const languages = [ 'en', 'pt'];
     const lang = button.target.getAttribute('data-lang');
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(btn) {
+        btn.classList.toggle('hide');
+    });
     languages.forEach(function(language) {
         const elements = document.querySelectorAll(`#${language}`);
         elements.forEach(function(element) {
