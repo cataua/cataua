@@ -1,106 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="https://use.typekit.net/uzt3ucj.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        h2, h3 {
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 10px;
-        }
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 1px solid #ddd;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        table th {
-            background-color: #007bff;
-            color: white;
-        }
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 10px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            main {
-                margin: 10px;
-                padding: 15px;
-            }
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #424040;
-            background-color: #a9c6e6;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .hide,
-        .btn.hide {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <script src="./assets/js/script.js" defer></script>
 </head>
+
 <body>
-<main>
-    <button data-action="translate" data-language="en" class="btn hide">English version</button>
-    <button data-action="translate" data-language="pt" class="btn">Versão em Português</button>
-    {{ content }}
-</main>
+    <div class="main-container">
+        <header class="header-container">
+            <div class="header-navigation">
+                <nav class="navigation-bar">
+                    <button class="menu-toggle" data-action="menu-toggle" data-target="#main-menu"
+                        aria-label="Toggle navigation menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <ul class="menu-nav" id="main-menu">
+                        <li class="nav-item">
+                            <a href="#top" class="btn">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="btn">
+                                About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="btn">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="action-container">
+                    <button data-action="translate" data-language="en" class="btn inline hide">
+                        <img src="./assets/img/icons/en.svg" class="icon">
+                        English version
+                    </button>
+                    <button data-action="translate" data-language="pt" class="btn inline">
+                        <img src="./assets/img/icons/pt.svg" class="icon">
+                        Versão em Português
+                    </button>
+                </div>
+            </div>
+            <div class="header-content">
+                <div class="header-title">
+                    <h1 class="uppercase">Rogério Caetano
+                        <small>Software Engineer/Software Architect</small>
+                    </h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+    </div>
 </body>
+
 </html>
