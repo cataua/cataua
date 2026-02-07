@@ -51,6 +51,14 @@ body {
   font-size: clamp(0.875rem, 0.6rem + 0.7vw, 1.125rem);
   scroll-behavior: smooth;
   transition: all 0.3s ease;
+
+  // Garante transições suaves para mudanças de display
+  * {
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease,
+      transform 0.3s ease;
+  }
 }
 
 img {
@@ -122,6 +130,7 @@ table {
 // Layout
 main {
   margin-top: 10vh;
+  animation: show 2s ease-in-out 0s 1 normal forwards;
 
   @media (min-width: $tablet-breakpoint) {
     margin-top: 15vh;
@@ -159,6 +168,7 @@ main {
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+  animation: appears 2s ease-in-out 0s 1 normal forwards;
 
   &.inline {
     display: inline;
@@ -216,6 +226,13 @@ main {
   &-container {
     background-color: $white;
     color: $text-dark;
+    padding: 0 15px;
+    width: calc(100vw - 15px);
+    margin: 0 auto;
+
+    @media (min-width: $tablet-breakpoint) {
+      width: calc(100% - 90px);
+    }
   }
   &-navigation {
     display: flex;
@@ -233,7 +250,6 @@ main {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: 1000;
   }
 }
@@ -250,6 +266,7 @@ main {
     position: relative;
     width: 25px;
     height: 25px;
+    animation: show 2s ease-in-out 0s 1 normal forwards;
 
     .bar {
       display: block;
@@ -290,12 +307,13 @@ main {
     display: none;
     flex-direction: column;
     align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
     &.active {
       display: block;
       position: absolute;
-      top: 14vh;
+      top: 12vh;
       left: 0;
       width: 100%;
       height: 100vh;
@@ -465,5 +483,39 @@ main {
       border-top-right-radius: 0;
       border: 1px solid $border-color;
     }
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appears {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  25% {
+    opacity: 0.5;
+    transform: rotateY(45deg);
+  }
+  50% {
+    opacity: 0.75;
+    transform: rotateY(30deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: rotateY(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0);
   }
 }
