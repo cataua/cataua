@@ -1,5 +1,12 @@
 // Variables
 $primary-color: #007bff;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$success-color: #28a745;
+$stack-color: #1d4b74;
+$stack-text-color: #fff;
+$card-color: #fc8f00;
+$card-text-color: #fff;
 $text-dark: #333;
 $text-darker: #222;
 $text-light: #424040;
@@ -31,6 +38,7 @@ $large-desktop-breakpoint: 1920px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 // Base styles
@@ -41,6 +49,8 @@ body {
   background-color: white;
   padding: 0 15px;
   font-size: clamp(0.875rem, 0.6rem + 0.7vw, 1.125rem);
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
 }
 
 img {
@@ -110,6 +120,13 @@ table {
 }
 
 // Layout
+main {
+  margin-top: 10vh;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 15vh;
+  }
+}
 .main-container {
   display: flex;
   flex-direction: column;
@@ -196,6 +213,10 @@ table {
   }
 }
 .header {
+  &-container {
+    background-color: $white;
+    color: $text-dark;
+  }
   &-navigation {
     display: flex;
     justify-content: space-between;
@@ -206,32 +227,99 @@ table {
     }
   }
 }
+
+.fixed {
+  &-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
 .navigation-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0.9375rem;
   .menu-toggle {
     display: block;
     background: none;
     border: none;
     cursor: pointer;
+    position: relative;
+    width: 25px;
+    height: 25px;
 
     .bar {
       display: block;
+      position: absolute;
       width: 25px;
       height: 3px;
-      margin: 5px auto;
       background-color: $text-dark;
       transition: all 0.3s ease;
+      left: 0;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 11px;
+      }
+      &:nth-child(3) {
+        top: 22px;
+      }
+    }
+    &.active {
+      .bar {
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 11px;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+          top: 11px;
+        }
+      }
     }
   }
   .menu-nav {
     display: none;
     flex-direction: column;
     align-items: center;
-  }
-  .menu-nav.active {
-    display: flex;
+    margin: 0;
+    padding: 0;
+    &.active {
+      display: block;
+      position: absolute;
+      top: 14vh;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: $white;
+      padding: 15px 0;
+      z-index: 1000;
+    }
+    .nav-item {
+      color: $text-dark;
+      padding: 0;
+      font-size: clamp(1rem, 0.8rem + 0.4vw, 1.2rem);
+      text-decoration: none;
+      a {
+        display: block;
+        padding: 10px 15px;
+        color: inherit;
+        text-decoration: none;
+        &:hover {
+          color: $text-soft;
+          background-color: $bg-dark;
+          text-decoration: underline;
+        }
+      }
+    }
   }
   .action {
     &-container {
@@ -247,40 +335,135 @@ table {
   height: 20px;
 }
 
-.about {
+.about,
+.experience,
+.expertise,
+.stack,
+.interests,
+.projects,
+.skills,
+.contact,
+.education,
+.blog {
   font-size: clamp(1.25rem, 0.9rem + 0.3vw, 2.25rem);
   font-weight: 200;
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 2rem;
   align-items: start;
+  margin: 2.25rem 0;
+  border: 1px solid $bg-darker;
+  background-color: $bg-darker;
+  &:has(.section-title.left) {
+    grid-template-columns: 10% 1fr;
+  }
+  &:has(.section-title.right) {
+    grid-template-columns: 1fr 10%;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    &:has(.section-title.left) {
+      grid-template-columns: 5% 1fr;
+    }
+    &:has(.section-title.right) {
+      grid-template-columns: 1fr 5%;
+    }
+  }
+
+  &:has(.section-title.left) .section-content {
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  &:has(.section-title.right) .section-content {
+    grid-column: 1;
+    justify-self: start;
+    margin-left: 0rem;
+    max-width: 70vw;
+  }
 }
 
 .section {
   &-title {
-    font-size: clamp(7.8rem, 2.2rem + 4.5vw, 7.8rem);
-    line-height: 3.93rem;
-    margin: 0;
-    grid-column: 1;
+    font-size: clamp(4.8rem, 2.2rem + 4.5vw, 4.8rem);
     grid-row: 1;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     white-space: nowrap;
-    letter-spacing: -0.9rem;
+    color: $white;
+    line-height: 5.5rem;
+    text-transform: uppercase;
+    &.left {
+      grid-column: 1;
+      justify-self: start;
+      transform: rotate(180deg);
+    }
+    &.right {
+      grid-column: 2;
+      justify-self: end;
+      transform: rotate(0deg);
+      margin-top: -0.7rem;
+      font-size: clamp(7rem, 2.2rem + 4.5vw, 7rem);
+    }
   }
   &-content {
     grid-column: 2;
     grid-row: 1;
-    margin-top: 20px;
+    padding: 1.3125rem;
+    background-color: $white;
+    height: 100%;
+    color: $text-dark;
 
-    @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint - 1px) {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      li {
+        margin-bottom: 0.5rem;
+        margin-left: 0rem;
+        padding: 0 5px 5px 1.5rem;
+        outline: 1px solid $card-color;
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        border-left: 15px solid $card-color;
+      }
+    }
+
+    @media (min-width: $mobile-breakpoint) and (max-width: calc($tablet-breakpoint - 1px)) {
       font-size: 1.624rem;
     }
-    @media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint - 1px) {
+    @media (min-width: $tablet-breakpoint) and (max-width: calc($desktop-breakpoint - 1px)) {
       font-size: 2rem;
     }
     @media (min-width: $desktop-breakpoint) {
       font-size: 2.08rem;
+    }
+  }
+}
+
+.cards {
+  &-definitions {
+    display: block;
+    .card,
+    dt {
+      background-color: $card-color;
+      color: $card-text-color;
+      padding: 1.3125rem;
+      border-radius: 4px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border: 1px solid $card-color;
+      border-bottom-width: 0;
+    }
+    dd {
+      background-color: $white;
+      color: $text-dark;
+      padding: 1.3125rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: 1px solid $border-color;
     }
   }
 }

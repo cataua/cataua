@@ -11,24 +11,32 @@
 
 function translate(button) {
   const languages = ["en", "pt"];
-  const lang = button.target.getAttribute("data-language");
-  const buttons = document.querySelectorAll('[data-action="translate"]');
-  buttons.forEach(function (btn) {
-    btn.classList.toggle("hide");
+  const lang = button.currentTarget.getAttribute("data-language");
+  const contentToShow = document.querySelector(`#${lang}`);
+  const buttonsToShow = document.querySelectorAll(
+    `[data-action="translate"]:not([data-language="${lang}"])`,
+  );
+  button.currentTarget.classList.add("hide");
+  buttonsToShow.forEach(function (btn) {
+    btn.classList.remove("hide");
   });
-  languages.forEach(function (language) {
-    const element = document.querySelector(`#${language}`);
-    const id = element.getAttribute("id");
-    if (lang !== id) {
-      element.classList.add("hide");
-    } else {
-      element.classList.remove("hide");
-    }
-  });
+  if (contentToShow) {
+    languages.forEach(function (language) {
+      const content = document.querySelector(`#${language}`);
+      if (content) {
+        if (language === lang) {
+          content.classList.remove("hide");
+        } else {
+          content.classList.add("hide");
+        }
+      }
+    });
+  }
 }
 
 function toggleMenu(event) {
   const targetSelector = event.currentTarget.getAttribute("data-target");
+  event.currentTarget.classList.toggle("active");
   const menu = document.querySelector(targetSelector);
-  menu.classList.toggle("hide");
+  menu.classList.toggle("active");
 }
