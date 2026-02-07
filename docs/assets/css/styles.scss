@@ -272,5 +272,15 @@ table {
     grid-column: 2;
     grid-row: 1;
     margin-top: 20px;
+
+    @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint - 1px) {
+      font-size: 1.624rem;
+    }
+    @media (min-width: $tablet-breakpoint) and (max-width: $desktop-breakpoint - 1px) {
+      font-size: 2rem;
+    }
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 2.08rem;
+    }
   }
 }
