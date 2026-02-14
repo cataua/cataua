@@ -8,7 +8,7 @@
   if (menuNav) {
     const links = menuNav.querySelectorAll("a");
     links.forEach(function (link) {
-      link.addEventListener("click", hideMenu);
+      link.addEventListener("click", NavigationMenu);
     });
   }
   button.forEach(function (btn) {
@@ -38,6 +38,17 @@ function translate(button) {
         }
       }
     });
+      const menuNav = document.querySelector(".menu-nav");
+      if (menuNav) {
+        const links = menuNav.querySelectorAll("a");
+        links.forEach(function (link) {
+          const href = link.getAttribute("href");
+          const newDestination = (lang === "pt" && href !== "#top")
+            ? `${href}-pt`
+            : href.replace("-pt", "");
+          link.setAttribute("href", newDestination);
+        });
+      }
   }
   hideMenu();
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -57,4 +68,25 @@ function hideMenu() {
     btnToggleMenu.classList.remove("active");
     menuNav.classList.remove("active");
   }
+}
+
+function NavigationMenu(event) {
+  event.preventDefault();
+  const targetSelector = event.currentTarget.getAttribute("href");
+  if (targetSelector === "#top") {
+    console.log("scrolling to top");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    hideMenu();
+    return;
+  }
+  const targetElement = document.querySelector(targetSelector);
+  console.log({ targetSelector, targetElement });
+  if (targetElement) {
+    const posY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+    const isMobile = window.innerWidth < 768;
+    window.scrollTo({ top: posY - (isMobile ? 150 : 250), behavior: "smooth" });
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  hideMenu();
 }
