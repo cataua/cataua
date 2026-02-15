@@ -1,0 +1,6 @@
+{
+  "jekyll-run.commandLineArguments": "--watch --source docs --config docs/_config.yml",
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false
+}
