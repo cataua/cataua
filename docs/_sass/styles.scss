@@ -5,7 +5,6 @@ $danger-color: #dc3545;
 $success-color: #28a745;
 $stack-color: #1d4b74;
 $stack-text-color: #fff;
-$card-color: #fc8f00;
 $card-text-color: #fff;
 $text-dark: #333;
 $text-darker: #222;
@@ -17,6 +16,7 @@ $bg-dark: #333;
 $bg-darker: #1a1a1a;
 $black: #000;
 $white: #fff;
+$card-color: $text-soft;
 $transparent: transparent;
 $font-stack: filson-pro,
   -apple-system,
@@ -168,7 +168,7 @@ main {
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
-  animation: appears 2s ease-in-out 0s 1 normal forwards;
+  animation: rotation 2s ease-in-out 0s 1 normal forwards;
 
   &.inline {
     display: inline;
@@ -197,6 +197,12 @@ main {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+#pt,
+#en {
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  animation: show 1s ease-in-out 0s 1 normal forwards;
 }
 
 .hide {
@@ -404,79 +410,95 @@ main {
   margin: 2.25rem 0;
   border: 1px solid $bg-darker;
   background-color: $bg-darker;
-}
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 
-.section {
-  &-title {
-    display: block;
-    font-size: 18px;
-    white-space: nowrap;
-    color: $white;
-    text-transform: uppercase;
-    margin: 4px;
-
-    &::before {
-      content: "::";
-      display: inline-block;
-      width: auto;
-      height: 1px;
-      margin: 0 0.5rem 0.5rem;
-    }
+  .wrapped {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
   }
 
-  &-content {
-    padding: 1.3125rem;
-    background-color: $white;
-    height: 100%;
-    color: $text-dark;
+  .section {
+    &-title {
+      display: block;
+      font-size: 18px;
+      white-space: nowrap;
+      color: $white;
+      text-transform: uppercase;
+      margin: 4px;
 
-    @media (min-width: $mobile-breakpoint) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
+      &::before {
+        content: "::";
+        display: inline-block;
+        width: auto;
+        height: 1px;
+        margin: 0 0.5rem 0.5rem;
+      }
     }
 
-    .profile {
-      &-avatar {
-        display: block;
-        margin: 0 auto;
+    &-content {
+      padding: 1.3125rem;
+      background-color: $white;
+      height: 100%;
+      color: $text-dark;
 
-        @media (min-width: $mobile-breakpoint) {
-          flex: 1 0 15%;
-          margin-right: 1.5rem;
+      @media (min-width: $mobile-breakpoint) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-          img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
+      }
+
+      .profile {
+        &-avatar {
+          display: block;
+          margin: 0 auto;
+
+          &.rounded {
+
+            img {
+              border-radius: 50%;
+            }
           }
 
-          .avatar {
-            margin: 0 auto;
+          @media (min-width: $mobile-breakpoint) {
+            flex: 1 0 15%;
+            margin-right: 1.5rem;
+
+            img {
+              width: 150px;
+              height: 150px;
+              object-fit: cover;
+            }
+
+            .avatar {
+              margin: 0 auto;
+            }
           }
         }
       }
-    }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
 
-      li {
-        margin-bottom: 0.5rem;
-        margin-left: 0rem;
-        padding: 0 5px 5px 1.5rem;
-        outline: 1px solid $card-color;
-        border-radius: 4px;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        border-left: 15px solid $card-color;
+        li {
+          margin-bottom: 0.5rem;
+          margin-left: 0rem;
+          padding: 0 5px 5px 1.5rem;
+          outline: 1px solid $card-color;
+          border-radius: 4px;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+          border-left: 15px solid $card-color;
+        }
       }
-    }
 
-    @media (min-width: $tablet-breakpoint) {
-      font-size: 1rem;
+      @media (min-width: $tablet-breakpoint) {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -522,7 +544,7 @@ main {
   }
 }
 
-@keyframes appears {
+@keyframes rotation {
   0% {
     opacity: 0;
     transform: rotateY(90deg);

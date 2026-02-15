@@ -30,6 +30,15 @@ function translate(button) {
   if (contentToShow) {
     languages.forEach(function (language) {
       const content = document.querySelector(`#${language}`);
+      const menuNav = document.querySelector(".menu-nav");
+      const menuLinks = menuNav ? menuNav.querySelectorAll("a") : [];
+      menuLinks.forEach(function (link) {
+        const contentKey = link.getAttribute("data-content");
+        const menuText = MenuText[lang][contentKey];
+        if (menuText) {
+          link.textContent = menuText;
+        }
+      });
       if (content) {
         if (language === lang) {
           content.classList.remove("hide");
@@ -73,14 +82,12 @@ function hideMenu() {
 function NavigationMenu(event) {
   event.preventDefault();
   const targetSelector = event.currentTarget.getAttribute("href");
-  if (targetSelector === "#top") {
-    console.log("scrolling to top");
+  if (targetSelector === "#top") {  
     window.scrollTo({ top: 0, behavior: "smooth" });
     hideMenu();
     return;
   }
   const targetElement = document.querySelector(targetSelector);
-  console.log({ targetSelector, targetElement });
   if (targetElement) {
     const posY = targetElement.getBoundingClientRect().top + window.pageYOffset;
     const isMobile = window.innerWidth < 768;
@@ -90,3 +97,20 @@ function NavigationMenu(event) {
   }
   hideMenu();
 }
+
+const MenuText = {
+  en: {
+    about: "About",
+    background: "Background",
+    stack: "Tech Stack & Tools",
+    interests: "Personal Interests",
+    contact: "Contact",
+  },
+  pt: {
+    about: "Sobre",
+    background: "Histórico",
+    stack: "Tecnologias & Ferramentas",
+    interests: "Interesses Pessoais",
+    contact: "Contato",
+  },
+};
