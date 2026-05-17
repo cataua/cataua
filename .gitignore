@@ -1,2 +1,20 @@
-.history
-_site
+# Jekyll build output
+_site/
+.jekyll-cache/
+.sass-cache/
+.history/
+
+# Bundler / Ruby
+.bundle/
+vendor/bundle/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.idea/
