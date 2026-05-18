@@ -1,13 +1,11 @@
 ---
 layout: post
-title: "Primeiro post"
-excerpt: "TRALA AL ALA AL"
+title: "Primeiro post dia 16"
+excerpt: "Apresentação"
 ---
 <section class="article">
   <h2 class="section-title left">{{ page.title }}</h2>
   <div class="section-content">
-    <p>Here you can find a collection of articles and projects that I have worked on, covering a range of topics from
-      web development to hardware programming. These articles reflect my passion for technology and my commitment to
-      sharing knowledge with the community.</p>
+    <p>Aqui teremos alguns artigos mostrando os meus estudos, pesquisas e experiências na área de programação, eletrônica, além de alguns outros conteúdos sobre retrocomputaria, música e artes</p>
   </div>
 </section>
