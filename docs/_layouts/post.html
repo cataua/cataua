@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uzt3ucj.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body id="top">
+  <div class="main-container">
+    <header class="header-container fixed-top">
+      <div class="header-content">
+        <div class="header-title">
+          <h1 class="uppercase">Rogério Caetano
+            <small>Software Engineer/Software Architect</small>
+          </h1>
+        </div>
+      </div>
+      <div class="header-navigation">
+        <nav class="navigation-bar">
+          <button class="menu-toggle" data-action="menu-toggle" data-target="#main-menu"
+            aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="menu-nav" id="main-menu">
+            <li class="nav-item">
+              <a href="/" data-content="bck2home">
+                Back to home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" data-content="about">
+                About
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#expertise" data-content="background">
+                Background
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#stack" data-content="stack">
+                Tech stack & tools
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#interests" data-content="interests">
+                Personal interests
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#articles" data-content="articles">
+                Articles
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" data-content="contact">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="action-container">
+          <button data-action="translate" data-language="en" class="btn inline hide">
+            <img src="./assets/img/icons/en.svg" class="icon">
+            English version
+          </button>
+          <button data-action="translate" data-language="pt" class="btn inline">
+            <img src="./assets/img/icons/pt.svg" class="icon">
+            Versão em Português
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+  </div>
+</body>
+
+</html>

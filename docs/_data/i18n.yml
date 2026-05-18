@@ -1,0 +1,37 @@
+en:
+  html_lang: en
+  nav:
+    home: Home
+    back_to_home: Back to home
+    about: About
+    background: Background
+    stack: Tech stack & tools
+    interests: Personal interests
+    articles: Articles
+    contact: Contact
+    home_url: /
+    articles_url: /articles/
+  actions:
+    english: English version
+    portuguese: Versão em Português
+  buttons:
+    menu_toggle: Toggle navigation menu
+
+pt:
+  html_lang: pt-BR
+  nav:
+    home: Início
+    back_to_home: Voltar para o início
+    about: Sobre
+    background: Experiência
+    stack: Stack & ferramentas
+    interests: Interesses pessoais
+    articles: Artigos
+    contact: Contato
+    home_url: /pt/
+    articles_url: /pt/articles/
+  actions:
+    english: English version
+    portuguese: Versão em Português
+  buttons:
+    menu_toggle: Alternar menu de navegação

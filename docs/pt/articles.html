@@ -1,0 +1,23 @@
+---
+layout: posts
+title: Artigos
+permalink: /pt/articles/
+lang: pt
+---
+<section class="articles">
+  <h2 class="section-title left">Artigos</h2>
+  <div class="section-content">
+    <p>Aqui você pode encontrar uma coleção de artigos e projetos nos quais trabalhei, abrangendo uma variedade de
+      tópicos, desde desenvolvimento web até programação de hardware. Esses artigos refletem minha paixão pela
+      tecnologia e meu compromisso em compartilhar conhecimento com a comunidade.</p>
+
+    <ul class="articles-list">
+      {% for post in site.posts %}
+      <li class="articles-list-item">
+        <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

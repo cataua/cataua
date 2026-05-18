@@ -80,37 +80,45 @@ function hideMenu() {
 }
 
 function NavigationMenu(event) {
-  event.preventDefault();
-  const targetSelector = event.currentTarget.getAttribute("href");
-  if (targetSelector === "#top") {  
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  if (event.currentTarget.getAttribute("href").startsWith("#")) {
+    event.preventDefault();
+    const targetSelector = event.currentTarget.getAttribute("href");
+    if (targetSelector === "#top") {  
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      hideMenu();
+      return;
+    }
+    const targetElement = document.querySelector(targetSelector);
+    if (targetElement) {
+      const posY = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const isMobile = window.innerWidth < 768;
+      window.scrollTo({ top: posY - (isMobile ? 150 : 250), behavior: "smooth" });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
     hideMenu();
-    return;
   }
-  const targetElement = document.querySelector(targetSelector);
-  if (targetElement) {
-    const posY = targetElement.getBoundingClientRect().top + window.pageYOffset;
-    const isMobile = window.innerWidth < 768;
-    window.scrollTo({ top: posY - (isMobile ? 150 : 250), behavior: "smooth" });
-  } else {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-  hideMenu();
 }
 
 const MenuText = {
   en: {
+    bck2home: "Back to home",
+    home: "Home",
     about: "About",
     background: "Background",
     stack: "Tech Stack & Tools",
     interests: "Personal Interests",
+    articles: "Articles",
     contact: "Contact",
   },
   pt: {
+    bck2home: "Voltar para o início",
+    home: "Início",
     about: "Sobre",
     background: "Histórico",
     stack: "Tecnologias & Ferramentas",
     interests: "Interesses Pessoais",
+    articles: "Artigos",
     contact: "Contato",
   },
 };
