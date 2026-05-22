@@ -1,5 +1,6 @@
 en:
   html_lang: en
+  description: Software Engineer/Software Architect - Design | Software Engineering | IoT | Retrocomputing
   nav:
     home: Home
     back_to_home: Back to home
@@ -19,6 +20,7 @@ en:
 
 pt:
   html_lang: pt-BR
+  description: Engenheiro de Software/Arquiteto de Software - Design | Engenharia de Software | IoT | Retrocomputação
   nav:
     home: Início
     back_to_home: Voltar para o início

@@ -27,7 +27,7 @@
       <div class="header-content">
         <div class="header-title">
           <h1 class="uppercase">Rogério Caetano
-            <small>Software Engineer/Software Architect</small>
+            <small>{{ t.description }}</small>
           </h1>
         </div>
       </div>
@@ -48,7 +48,7 @@
           </ul>
         </nav>
         <div class="action-container">
-          <a href="{{ t_other.nav.home_url }}articles" data-action="translate" data-language="{{ other_lang }}"
+          <a href="{{ t_other.nav.home_url }}" data-action="translate" data-language="{{ other_lang }}"
             class="btn inline">
             <img src="{{ site.baseurl }}/assets/img/icons/{{ other_lang }}.svg" class="icon">
             {% if is_en %}

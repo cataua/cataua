@@ -2,6 +2,8 @@
 layout: post
 title: "First post day 16"
 excerpt: "Here is the english excerpt"
+tags: content retrocomputer
+lang: "en"
 ---
 <section class="article">
   <h2 class="section-title left">{{ page.title }}</h2>

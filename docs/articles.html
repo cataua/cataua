@@ -11,13 +11,40 @@ lang: en
       web development to hardware programming. These articles reflect my passion for technology and my commitment to
       sharing knowledge with the community.</p>
 
-    <ul class="articles-list">
-      {% for post in site.posts %}
-      <li class="articles-list-item">
-        <a href="{{ post.url }}">{{ post.title }}</a>
-        {{ post.excerpt }}
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="articles-list-container">
+      <h3 class="articles-list-container-title">Latest Articles</h3>
+      <ul class="articles-list">
+        {% assign posts = site.posts | where: "lang", "en" %}
+        {% assign thumbnail_placeholders =
+        "/assets/img/placeholder-articles-square.png|/assets/img/placeholder-articles-square-front.png" | split: "|" %}
+        {% for post in posts %}
+        {% assign current_thumbnail = thumbnail_placeholders | sample %}
+        <li class="articles-list-item">
+          <a href="{{post.url}}">
+            <article class="article-item">
+              <picture class="article-item-thumb">
+                <source srcset="{{ post.thumbnail | default: current_thumbnail }}" type="image/webp">
+                <img src="{{ post.thumbnail | default: current_thumbnail }}" alt="{{ post.title }}">
+              </picture>
+              <div class="article-item-content">
+                {% if post.categories %}
+                <div class="article-item-category">{{ post.categories[1] }}</div>
+                {% endif %}
+                <h4 class="article-item-content-title">{{ post.title }}</h4>
+                <div class="article-item-content-date">{{ post.date | date: "%d/%m/%Y" }}</div>
+                <div class="article-item-content-tags">
+                  {% if post.tags %}
+                  {% for tag in post.tags %}
+                  <span class="article-item-content-tag">{{ tag }}</span>
+                  {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+            </article>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>

@@ -1,5 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+{% assign lang = page.lang | default: site.language_default %}
+{% assign t = site.data.i18n[lang] | default: site.data.i18n[site.language_default] %}
+{% if lang == "en" %}
+{% assign is_en = true %}
+{% assign other_lang = "pt" %}
+{% else %}
+{% assign is_en = false %}
+{% assign other_lang = "en" %}
+{% endif %}
+{% assign t_other = site.data.i18n[other_lang] %}
+<html lang="{{ t.html_lang | default: lang }}">
 
 <head>
   <meta charset="UTF-8">
@@ -7,8 +17,8 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" href="https://use.typekit.net/uzt3ucj.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/styles.css">
-  <script src="./assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <script src="{{ site.baseurl }}/assets/js/script.js" defer></script>
 </head>
 
 <body id="top">
@@ -17,7 +27,7 @@
       <div class="header-content">
         <div class="header-title">
           <h1 class="uppercase">Rogério Caetano
-            <small>Software Engineer/Software Architect</small>
+            <small>{{ t.description }}</small>
           </h1>
         </div>
       </div>
@@ -36,46 +46,22 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#about" data-content="about">
-                About
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#expertise" data-content="background">
-                Background
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#stack" data-content="stack">
-                Tech stack & tools
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#interests" data-content="interests">
-                Personal interests
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#articles" data-content="articles">
-                Articles
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#contact" data-content="contact">
-                Contact
+              <a href="/articles">
+                Back to Articles
               </a>
             </li>
           </ul>
         </nav>
         <div class="action-container">
-          <button data-action="translate" data-language="en" class="btn inline hide">
-            <img src="./assets/img/icons/en.svg" class="icon">
-            English version
-          </button>
-          <button data-action="translate" data-language="pt" class="btn inline">
-            <img src="./assets/img/icons/pt.svg" class="icon">
-            Versão em Português
-          </button>
+          <a href="{{ t_other.nav.home_url }}" data-action="translate" data-language="{{ other_lang }}"
+            class="btn inline">
+            <img src="{{ site.baseurl }}/assets/img/icons/{{ other_lang }}.svg" class="icon">
+            {% if is_en %}
+            {{ t.actions.portuguese }}
+            {% else %}
+            {{ t.actions.english }}
+            {% endif %}
+          </a>
         </div>
       </div>
     </header>

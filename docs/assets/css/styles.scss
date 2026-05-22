@@ -1,44 +1,8 @@
-// Variables
-$primary-color: #007bff;
-$warning-color: #ffc107;
-$danger-color: #dc3545;
-$success-color: #28a745;
-$stack-color: #1d4b74;
-$stack-text-color: #fff;
-$card-text-color: #fff;
-$text-dark: #333;
-$text-darker: #222;
-$text-light: #424040;
-$text-soft: #808080;
-$border-color: #ddd;
-$bg-light: #a9c6e6;
-$bg-dark: #333;
-$bg-darker: #1a1a1a;
-$black: #000;
-$white: #fff;
-$card-color: $text-soft;
-$transparent: transparent;
-$font-stack: filson-pro,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Oxygen,
-  Ubuntu,
-  Cantarell,
-  sans-serif;
-$mobile-breakpoint: 768px;
-$tablet-breakpoint: 1024px;
-$desktop-breakpoint: 1440px;
-$large-desktop-breakpoint: 1920px;
+@use "reset";
+@use "variables" as *;
+@use "components/articles" as articles;
 
-// Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
+
 
 // Base styles
 body {
@@ -503,9 +467,33 @@ main {
   }
 }
 
+.interests {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      flex: 1 0 calc(33.333% - 1rem);
+
+      @media (max-width: $mobile-breakpoint) {
+        flex: 1 0 calc(50% - 1rem);
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        flex: 1 0 calc(100% - 1rem);
+      }
+    }
+  }
+}
+
 .cards {
   &-definitions {
     display: block;
+    width: 100%;
 
     .card,
     dt {
