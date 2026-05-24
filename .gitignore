@@ -7,11 +7,6 @@ _site/
 # Bundler / Ruby
 .bundle/
 vendor/bundle/
-docs/vendor/bundle/
-docs/vendor/cache/
-vendor/cache/
-vendor/gems/
-vendor/ruby/
 
 # Logs
 *.log
