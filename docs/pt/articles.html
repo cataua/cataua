@@ -1,26 +1,15 @@
 ---
 layout: posts
 title: Artigos
-permalink: /pt/articles/
 lang: pt
----
-<section class="articles">
-  <h2 class="section-title left">Artigos</h2>
-  <div class="section-content">
-    <p>Aqui você pode encontrar uma coleção de artigos e projetos nos quais trabalhei, abrangendo uma variedade de
-      tópicos, desde desenvolvimento web até programação de hardware. Esses artigos refletem minha paixão pela
-      tecnologia e meu compromisso em compartilhar conhecimento com a comunidade.</p>
+published: true
+permalink: /pt/artigos/
+pagination: { enabled: true, per_page: 10, permalink: "/page/:num/" }
 
-    <div class="articles-list">
-      <h3 class="articles-list-title">Últimos Artigos</h3>
-      <ul class="articles-list">
-        {% for post in site.posts %}
-        <li class="articles-list-item">
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          {{ post.excerpt }}
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</section>
+---
+<p>A ideia desta seção do site é compartilhar, com quem se interessar, artigos, projetos, anotações de estudo e até
+  mesmo os pontos de dificuldade que encontrei no entendimento de cada assunto abordado.</p>
+<p>Além disso, vou publicar minhas experiências com eletrônica, programação e outras áreas relacionadas à tecnologia,
+  buscando ser o mais detalhista possível e apresentar tudo de forma clara e didática. Ainda assim, nenhum conteúdo
+  aqui tem a pretensão de ser verdade absoluta: a ideia é que ele sirva tanto como ponto de partida quanto como espaço
+  para reflexão e discussão sobre os temas abordados.</p>

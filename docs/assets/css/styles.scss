@@ -1,6 +1,8 @@
 @use "reset";
 @use "variables" as *;
+@use "components/responsive" as responsive;
 @use "components/articles" as articles;
+@use "components/pagination" as pagination;
 
 
 
@@ -120,6 +122,39 @@ main {
   }
 }
 
+.site {
+  &-footer {
+    .contact {
+      background-color: $white;
+      color: $text-dark;
+      text-align: center;
+      border-width: 0;
+      box-shadow: none;
+      margin: 0;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-copyright {
+      font-size: 0.9rem;
+      color: $text-soft;
+      margin: 16px -15px 0;
+      display: block;
+      text-align: center;
+      border-top: 1px solid $border-color;
+      padding: 15px;
+    }
+  }
+}
+
 // Buttons
 .btn {
   display: inline-block;
@@ -161,6 +196,12 @@ main {
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   border: 0;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 
 #pt,

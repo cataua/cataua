@@ -4,6 +4,7 @@ en:
   nav:
     home: Home
     back_to_home: Back to home
+    back_to_articles: Back to Articles
     about: About
     background: Background
     stack: Tech stack & tools
@@ -17,6 +18,19 @@ en:
     portuguese: Versão em Português
   buttons:
     menu_toggle: Toggle navigation menu
+  pagination:
+    previous: Previous
+    next: Next
+    page_label: "Page"
+    of_label: "of"
+  articles:
+    title: Articles
+    latest: Latest Articles
+    no_articles: No articles found.
+  footer:
+    rights_reserved: All rights reserved.
+    contact-title: Get in Touch
+    contact-description: Whether it's to discuss the future of IoT or to talk about the golden age of 8-bit microcomputers, feel free to reach out through any of the channels below.
 
 pt:
   html_lang: pt-BR
@@ -24,6 +38,7 @@ pt:
   nav:
     home: Início
     back_to_home: Voltar para o início
+    back_to_articles: Voltar para os artigos
     about: Sobre
     background: Experiência
     stack: Stack & ferramentas
@@ -31,9 +46,22 @@ pt:
     articles: Artigos
     contact: Contato
     home_url: /pt/
-    articles_url: /pt/articles/
+    articles_url: /pt/artigos/
   actions:
     english: English version
     portuguese: Versão em Português
   buttons:
     menu_toggle: Alternar menu de navegação
+  pagination:
+    previous: Anterior
+    next: Próxima
+    page_label: "Página"
+    of_label: "de"
+  articles:
+    title: Artigos
+    latest: Últimos Artigos
+    no_articles: Nenhum artigo encontrado.
+  footer:
+    rights_reserved: Todos os direitos reservados.
+    contact-title: Entre em contato
+    contact-description: Seja para discutir o futuro do IoT ou para falar sobre a era de ouro dos microcomputadores de 8 bits, sinta-se à vontade para entrar em contato!

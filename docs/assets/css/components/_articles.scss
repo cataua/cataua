@@ -23,6 +23,14 @@
       grid-template-columns: 1fr;
     }
 
+    &-container {
+      &-title {
+        border-bottom: 1px solid $border-color;
+        border-top: 1px solid $border-color;
+        font-weight: 100;
+      }
+    }
+
     a {
       text-decoration: none;
       color: inherit;
@@ -110,6 +118,109 @@
         }
       }
 
+    }
+  }
+
+  &-not {
+    &-found {
+      text-align: center;
+      padding: 2rem;
+      color: $text-soft;
+
+      p {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+      }
+
+      .no {
+        &-content {
+          display: block;
+          max-width: 128px;
+          margin: 0 auto;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
+
+.article {
+  &-header {
+    margin-bottom: 1rem;
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+
+    .article {
+      &-tag {
+        display: inline-block;
+        background-color: $white;
+        border: 1px solid $border-color;
+        color: $text-darker;
+        font-weight: 200;
+        padding: 3px 8px;
+        font-size: 0.75rem;
+        border-radius: 4px;
+        margin: 0;
+      }
+    }
+  }
+
+  .section {
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: $text-dark;
+
+      small {
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 100;
+        color: $text-soft;
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: $text-soft;
+        border-top: 1px solid $border-color;
+        padding-top: 0.5rem;
+        border-bottom: 1px solid $border-color;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-content {
+      line-height: 1.6;
+      color: $text-dark;
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: $primary-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
     }
   }
 }

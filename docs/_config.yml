@@ -12,12 +12,23 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-sass-converter
+
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: '/articles/page/:num/'
+  title: 'Articles - page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
 # Markdown
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+future: true
 
 # Collections
 language_default: en
