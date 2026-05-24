@@ -12,15 +12,69 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-paginate-v2
+  - jekyll-sass-converter
+
+pagination:
+  enabled: true
+  per_page: 12
+  permalink: '/articles/page/:num/'
+  title: 'Articles - page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
 # Markdown
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+future: true
 
 # Collections
-collections_dir: .
+language_default: en
+
+posts_dir: _posts
+collections:
+  en:
+    output: true
+    permalink: /en/:collection/:slug
+  pt:
+    output: true
+    permalink: /pt/:collection/:slug
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "en"
+    values:
+      layout: "page"
+  - scope:
+      path: "_en/posts"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /en/posts/:slug
+  - scope:
+      path: ""
+      type: "pt"
+    values:
+      layout: "page"
+  - scope:
+      path: "_pt/posts"
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /pt/posts/:slug
+
+# Sass configuration
+sass:
+  style: expanded
+  sass_dir: _sass
 
 # Exclude these files from the build
 exclude:

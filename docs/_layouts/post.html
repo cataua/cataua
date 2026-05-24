@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% assign lang = page.lang | default: site.language_default %}
+{% assign t = site.data.i18n[lang] | default: site.data.i18n[site.language_default] %}
+{% if lang == "en" %}
+{% assign is_en = true %}
+{% assign other_lang = "pt" %}
+{% else %}
+{% assign is_en = false %}
+{% assign other_lang = "en" %}
+{% endif %}
+{% assign t_other = site.data.i18n[other_lang] %}
+<html lang="{{ t.html_lang | default: lang }}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="https://use.typekit.net/uzt3ucj.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  <script src="{{ site.baseurl }}/assets/js/script.js" defer></script>
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-64x64.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-128x128.png" type="image/png" sizes="128x128">
+  <link rel="icon" href="{{ site.baseurl }}/assets/img/favicon-256x256.png" type="image/png" sizes="256x256">
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon-128x128.png" type="image/png">
+</head>
+
+<body id="top">
+  <div class="main-container">
+    <header class="header-container fixed-top">
+      <div class="header-content">
+        <div class="header-title">
+          <h1 class="uppercase">Rogério Caetano
+            <small>{{ t.description }}</small>
+          </h1>
+        </div>
+      </div>
+      <div class="header-navigation">
+        <nav class="navigation-bar">
+          <button class="menu-toggle" data-action="menu-toggle" data-target="#main-menu"
+            aria-label="Toggle navigation menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul class="menu-nav" id="main-menu">
+            <li class="nav-item">
+              <a href="/" data-content="bck2home">
+                {{ t.nav.back_to_home }}
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ t.nav.articles_url }}" data-content="bck2articles">
+                {{ t.nav.back_to_articles }}
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="action-container">
+          <a href="{{ t.nav.home_url }}" data-action="translate" data-language="{{ other_lang }}" class="btn inline">
+            <img src="{{ site.baseurl }}/assets/img/icons/{{ other_lang }}.svg" class="icon">
+            {% if is_en %}
+            {{ t.actions.portuguese }}
+            {% else %}
+            {{ t.actions.english }}
+            {% endif %}
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="article">
+
+        <div class="article-header">
+          <h2 class="section-title">
+            {% if page.categories %}
+            <small>{{ page.categories[1] }}</small>
+            {% endif %}
+            {{ page.title }}
+          </h2>
+          <div class="section-title-info">
+            {% assign current_lang = page.lang | default: "en" %}
+            {% assign is_en = true %}
+            {% if current_lang != "en" %}
+            {% assign is_en = false %}
+            {% endif %}
+            {% assign date_format = "%d/%m/%Y" %}
+            {% if is_en %}
+            {% assign date_format = "%B %d, %Y" %}
+            {% endif %}
+            <span class="article-date">{{ page.date | date: date_format }}</span>
+            {% if page.tags %}
+            <ul class="article-tags">
+              {% for tag in page.tags %}
+              <li class="article-tag">{{ tag }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          {% if page.banner %}
+          <picture class="article-banner">
+            <source srcset="{{ page.banner }}" type="image/webp">
+            <img src="{{ page.banner }}" alt="{{ page.title }}">
+          </picture>
+          {% endif %}
+        </div>
+        <div class="section-content">
+          {{ content }}
+        </div>
+      </section>
+    </main>
+
+  </div>
+  {% include footer-posts.html %}
+</body>
+
+</html>
