@@ -1,44 +1,10 @@
-// Variables
-$primary-color: #007bff;
-$warning-color: #ffc107;
-$danger-color: #dc3545;
-$success-color: #28a745;
-$stack-color: #1d4b74;
-$stack-text-color: #fff;
-$card-text-color: #fff;
-$text-dark: #333;
-$text-darker: #222;
-$text-light: #424040;
-$text-soft: #808080;
-$border-color: #ddd;
-$bg-light: #a9c6e6;
-$bg-dark: #333;
-$bg-darker: #1a1a1a;
-$black: #000;
-$white: #fff;
-$card-color: $text-soft;
-$transparent: transparent;
-$font-stack: filson-pro,
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Oxygen,
-  Ubuntu,
-  Cantarell,
-  sans-serif;
-$mobile-breakpoint: 768px;
-$tablet-breakpoint: 1024px;
-$desktop-breakpoint: 1440px;
-$large-desktop-breakpoint: 1920px;
+@import "reset";
+@import "variables";
+@import "components/responsive";
+@import "components/articles";
+@import "components/pagination";
 
-// Reset
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
+
 
 // Base styles
 body {
@@ -47,7 +13,7 @@ body {
   color: $text-dark;
   background-color: white;
   padding: 0 15px;
-  font-size: clamp(0.875rem, 0.6rem + 0.7vw, 1.125rem);
+  font-size: clamp(0.875rem, calc(0.6rem + 0.7vw), 1.125rem);
   scroll-behavior: smooth;
   transition: all 0.3s ease;
 
@@ -89,11 +55,11 @@ h3 {
 }
 
 h2 {
-  font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.6rem);
+  font-size: clamp(1.25rem, calc(1.05rem + 0.6vw), 1.6rem);
 }
 
 h3 {
-  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.3rem);
+  font-size: clamp(1.05rem, calc(0.95rem + 0.4vw), 1.3rem);
 }
 
 ul,
@@ -111,7 +77,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 15px 0;
-  font-size: clamp(0.9rem, 0.8rem + 0.2vw, 1rem);
+  font-size: clamp(0.9rem, calc(0.8rem + 0.2vw), 1rem);
 
   th,
   td {
@@ -161,7 +127,7 @@ main {
   display: inline-block;
   padding: 10px 15px;
   margin-bottom: 20px;
-  font-size: clamp(0.85rem, 0.75rem + 0.2vw, 0.95rem);
+  font-size: clamp(0.85rem, calc(0.75rem + 0.2vw), 0.95rem);
   color: $transparent;
   background-color: $transparent;
   border: none;
@@ -199,6 +165,12 @@ main {
   border: 0;
 }
 
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
 #pt,
 #en {
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
@@ -215,7 +187,7 @@ main {
     margin-bottom: 20px;
 
     h1 {
-      font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.4rem);
+      font-size: clamp(1.6rem, calc(1.2rem + 1.2vw), 2.4rem);
       color: $text-dark;
 
       &.uppercase {
@@ -224,7 +196,7 @@ main {
 
       small {
         display: block;
-        font-size: clamp(0.7rem, 0.55rem + 0.4vw, 0.9rem);
+        font-size: clamp(0.7rem, calc(0.55rem + 0.4vw), 0.9rem);
         color: $text-soft;
       }
     }
@@ -361,7 +333,7 @@ main {
     .nav-item {
       color: $text-dark;
       padding: 0;
-      font-size: clamp(1rem, 0.8rem + 0.4vw, 1.2rem);
+      font-size: clamp(1rem, calc(0.8rem + 0.4vw), 1.2rem);
       text-decoration: none;
 
       a {
@@ -503,9 +475,33 @@ main {
   }
 }
 
+.interests {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      flex: 1 0 calc(33.333% - 1rem);
+
+      @media (max-width: $mobile-breakpoint) {
+        flex: 1 0 calc(50% - 1rem);
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        flex: 1 0 calc(100% - 1rem);
+      }
+    }
+  }
+}
+
 .cards {
   &-definitions {
     display: block;
+    width: 100%;
 
     .card,
     dt {
@@ -528,6 +524,39 @@ main {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
       border: 1px solid $border-color;
+    }
+  }
+}
+
+.site {
+  &-footer {
+    &-contact {
+      background-color: $white;
+      color: $text-dark;
+      text-align: center;
+      border-width: 0;
+      box-shadow: none;
+      margin: 0;
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &-copyright {
+      font-size: 0.9rem;
+      color: $text-soft;
+      margin: 16px -15px 0;
+      display: block;
+      text-align: center;
+      border-top: 1px solid $border-color;
+      padding: 15px;
     }
   }
 }

@@ -43,7 +43,7 @@
     .article {
       &-item {
         position: relative;
-        background-color: color.adjust($white, $lightness: -8%);
+        background-color: darken($white, 8%);
         border: 1px solid $border-color;
         color: $bg-dark;
         padding: 0;
